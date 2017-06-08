@@ -1,0 +1,13 @@
+<ion-view view-title="Deals near you">
+    <ion-content>
+    	<div id="map">
+	    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+	    	<ui-gmap-markers models="markers" coords="'self'" icon="'icon'" click="onMarkerClick">
+                <ui-gmap-windows show="show">
+                    <div ng-non-bindable>{{content}}</div>
+                </ui-gmap-windows>
+        	</ui-gmap-markers>
+	    </ui-gmap-google-map>
+	</div>
+    </ion-content>
+</ion-view>

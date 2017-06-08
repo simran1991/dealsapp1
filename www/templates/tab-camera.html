@@ -1,0 +1,13 @@
+<ion-view view-title="Add your deal">
+    <ion-content>
+       <div class="list">
+        <label class="item item-input item-stacked-label">
+          <input type="text" placeholder="Deal description" ng-model="deal.description" required ng-trim="false">
+        </label>
+      </div>
+      <div class="button-bar">
+         <button ng-click="takePhoto()" class="button icon ion-aperture button-block button-light"></button>
+         <button ng-click="choosePhoto()" class="button icon ion-images button-block button-light"></button>
+      </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+
+.controller('ListCtrl', function($scope, $state, $cordovaGeolocation) {
+        console.log("List controler");
+
+
+        var options = { timeout: 10000, enableHighAccuracy: true };
+
+        $cordovaGeolocation.getCurrentPosition(options).then(function(position) {
+
+            var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            alert("your current position is" + latLng);
+            var mapOptions = {
+                center: latLng,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            google.maps.event.addListenerOnce($scope.map, 'idle', function() {
+
+                var marker = new google.maps.Marker({
+                    map: $scope.map,
+                    animation: google.maps.Animation.DROP,
+                    position: latLng
+
+                });
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: "Deal of the day"
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infoWindow.open($scope.map, marker);
+                });
+
+            });
+        }, function(error) {
+            alert("Could not get location");
+            alert("Could not get location" + error);
+        });
+
+        //Wait until the map is loaded
+
+
+
+    })

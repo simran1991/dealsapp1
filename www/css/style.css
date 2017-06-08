@@ -1,0 +1,71 @@
+/* Empty. Add your own CSS if you like */
+
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+
+.loginButton{
+	margin-top:50em;
+}
+
+.image-centered{
+	position: absolute;
+	left: 50%;
+	top: 35%;
+
+  
+	transform: translate(-50%, -50%);
+}
+
+.custom-icon {
+  font-size:25px;
+  background:#666;
+  background:rgba(0,0,0,0.4);
+  padding:5px;
+  -webkit-border-radius:1100%;
+  -moz-border-radius:100%;
+  -o-border-radius:100%;
+  border-radius:100%;
+  border:6px solid #fff;
+  color:#fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  text-align:center;
+  display:table-cell;
+  vertical-align:middle;
+  width:20px;
+  height:20px;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  -o-transition:.5s;
+  transition:.5s;
+}
+.custom-icon:hover {
+  background:rgba(0,0,0,0.6);
+}
+.fix-editor {
+  display:none;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
